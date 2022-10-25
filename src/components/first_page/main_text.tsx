@@ -1,18 +1,24 @@
 import React from 'react'
-import * as styled from "../../css/basic.style"
+import styled from 'styled-components'
+
+
+const KODiv = styled.div`
+    display: flex;
+    flex-direction: row;
+`
 
 const MainText = () => {
     return (
 
         <>
-            <styled.KODiv>
+            <KODiv>
                 <h1 >
                     K
                 </h1>
                 <h1 >
                     O
                 </h1>
-            </styled.KODiv>
+            </KODiv>
 
 
 

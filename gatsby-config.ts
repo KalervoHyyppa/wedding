@@ -17,6 +17,23 @@ const config: GatsbyConfig = {
         },
         __key: "images"
     }]
+
 };
 
 export default config;
+
+
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }: { stage: string; loaders: any, actions: any }) => {
+    if (stage === "build-html" || stage === "develop-html") {
+        actions.setWebpackConfig({
+            module: {
+                rules: [
+                    {
+                        test: /bad-module/,
+                        use: loaders.null(),
+                    },
+                ],
+            },
+        })
+    }
+}

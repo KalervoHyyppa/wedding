@@ -1,27 +1,35 @@
-import * as React from "react"
+import React, { useRef } from "react"
 import type { HeadFC } from "gatsby"
-import * as styled from "../css/basic.style"
 import { IParallax, Parallax } from '@react-spring/parallax'
+import styled from 'styled-components'
 
 import './index.css';
-import FirstPage from "./first_page";
-import SecondPage from "./second_page";
-import Background from "../components/second_page/background";
+import FirstPage from "../components/first_page/first_page";
+import SecondPage from "../components/second_page/second_page";
 
 
+const MainDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    background: linear-gradient(#e66465, #9198e5);
+`
 
 const IndexPage = () => {
-    const parallax = React.useRef<IParallax>(null)
+    const parallax = useRef<IParallax>(null!)
     return (
-        <styled.MainDiv>
-            <Parallax pages={2} style={{ top: '0', left: '0' }} ref={parallax}>
+        <MainDiv>
+            <Parallax pages={2} style={{ top: '0', left: '0' }} >
 
                 <FirstPage />
 
                 <SecondPage />
 
             </Parallax>
-        </styled.MainDiv>
+        </MainDiv>
     )
 }
 

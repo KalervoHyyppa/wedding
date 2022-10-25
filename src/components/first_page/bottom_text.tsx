@@ -1,17 +1,21 @@
 import React from 'react'
-import * as styled from "../../css/basic.style"
+import styled from 'styled-components'
 
+
+const BottomTextStyle = styled.h2`
+    color: white;
+`
 
 const BottomText = () => {
     return (
         <>
-            <styled.BottomTextStyle>
+            <BottomTextStyle>
                 Saranac, NY
-            </styled.BottomTextStyle>
+            </BottomTextStyle>
 
-            <styled.BottomTextStyle>
+            <BottomTextStyle>
                 September 22, 2023
-            </styled.BottomTextStyle>
+            </BottomTextStyle>
             <div style={{ height: "7.5rem" }} />
 
         </>

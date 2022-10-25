@@ -1,22 +1,23 @@
+
 import { ParallaxLayer } from '@react-spring/parallax'
 import * as React from "react"
-import Background from '../components/second_page/background'
-import Buttons from '../components/second_page/buttons'
-import SvgLake01 from '../images/Lake'
-import SvgLakeNoSun from '../images/Lake_noSun'
-import * as styled from '../css/basic.style'
+import Background from './background'
+import Buttons from './buttons'
+import styled from 'styled-components'
 
 
+const BackgroundContainer = styled.div`
+    height: 100%;
+`
 
 const SecondPage = () => {
+
     return (
         <>
+            <BackgroundContainer>
 
-            <styled.BackgroundContainer>
-
-                {/* <SvgLakeNoSun /> */}
                 <Background />
-            </styled.BackgroundContainer>
+            </BackgroundContainer>
 
             <ParallaxLayer
                 offset={1}
