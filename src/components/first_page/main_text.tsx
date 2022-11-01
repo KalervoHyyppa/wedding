@@ -1,3 +1,4 @@
+import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -12,12 +13,12 @@ const MainText = () => {
 
         <>
             <KODiv>
-                <h1 >
-                    K
-                </h1>
-                <h1 >
-                    O
-                </h1>
+                <StaticImage
+                    src="../../images/ko.png"
+                    alt="KO"
+                    width={250}
+                    placeholder="blurred"
+                />
             </KODiv>
 
 

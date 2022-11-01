@@ -4,11 +4,22 @@ import MainText from "./main_text";
 import Images from "../../pages/main_background";
 import BottomText from "./bottom_text";
 import styled from 'styled-components'
+import Scroll from "./scroll";
 
 const ImagesDiv = styled.div`
     position: absolute;
     z-index: -1;
     height: 100vh;
+    background-color: black;
+`
+
+const FadeInDiv = styled.div`
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 `
 
 const FirstPage = () => {
@@ -40,19 +51,39 @@ const FirstPage = () => {
 
             </ParallaxLayer>
 
-            <ParallaxLayer
-                offset={0}
-                speed={0.7}
-                style={{
-                    display: 'flex',
-                    justifyContent: 'flex-end',
-                    alignItems: 'center',
-                    flexDirection: "column",
-                }}
-            >
-                <BottomText />
+            <FadeInDiv>
 
-            </ParallaxLayer>
+                <ParallaxLayer
+                    offset={0}
+                    speed={0.7}
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                        alignItems: 'center',
+                        flexDirection: "column",
+                    }}
+                >
+                    <BottomText />
+
+                </ParallaxLayer>
+            </FadeInDiv>
+
+            <FadeInDiv>
+                <ParallaxLayer
+                    offset={0}
+                    speed={.9}
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                        alignItems: 'center',
+                        flexDirection: "column",
+
+                    }}
+                >
+                    <Scroll />
+
+                </ParallaxLayer>
+            </FadeInDiv>
         </>
     )
 }

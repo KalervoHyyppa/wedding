@@ -1,42 +1,48 @@
 {
-  "name": "wedding",
-  "version": "1.0.0",
-  "private": true,
-  "description": "wedding",
-  "author": "Kalervo Hyyppa",
-  "keywords": [
-    "gatsby"
-  ],
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@loadable/component": "^5.15.2",
-    "@react-spring/parallax": "^9.5.5",
-    "babel-plugin-styled-components": "^2.0.7",
-    "gatsby": "^4.24.4",
-    "gatsby-background-image": "^1.6.0",
-    "gatsby-plugin-image": "^2.24.0",
-    "gatsby-plugin-sharp": "^4.24.0",
-    "gatsby-plugin-styled-components": "^5.24.0",
-    "gatsby-source-filesystem": "^4.24.0",
-    "gatsby-transformer-sharp": "^4.24.0",
-    "gbimage-bridge": "^0.2.2",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "styled-components": "^5.3.6"
-  },
-  "devDependencies": {
-    "@svgr/cli": "^6.5.0",
-    "@types/node": "^17.0.45",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
-    "@types/styled-components": "^5.1.26",
-    "typescript": "^4.8.3"
-  }
+    "name": "wedding",
+    "version": "1.0.0",
+    "private": true,
+    "description": "wedding",
+    "author": "Kalervo Hyyppa",
+    "keywords": [
+        "gatsby"
+    ],
+    "scripts": {
+        "develop": "gatsby develop -H 0.0.0.0",
+        "start": "gatsby develop",
+        "build": "gatsby build",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean",
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^6.2.0",
+        "@fortawesome/free-solid-svg-icons": "^6.2.0",
+        "@fortawesome/react-fontawesome": "^0.2.0",
+        "@loadable/component": "^5.15.2",
+        "@react-spring/parallax": "^9.5.5",
+        "babel-plugin-styled-components": "^2.0.7",
+        "gatsby": "^4.24.4",
+        "gatsby-background-image": "^1.6.0",
+        "gatsby-omni-font-loader": "^2.0.2",
+        "gatsby-plugin-fontawesome-css": "^1.2.0",
+        "gatsby-plugin-image": "^2.24.0",
+        "gatsby-plugin-sharp": "^4.24.0",
+        "gatsby-plugin-styled-components": "^5.24.0",
+        "gatsby-source-filesystem": "^4.24.0",
+        "gatsby-transformer-sharp": "^4.24.0",
+        "gbimage-bridge": "^0.2.2",
+        "react": "^18.1.0",
+        "react-dom": "^18.1.0",
+        "react-helmet": "^6.1.0",
+        "styled-components": "^5.3.6"
+    },
+    "devDependencies": {
+        "@svgr/cli": "^6.5.0",
+        "@types/node": "^17.0.45",
+        "@types/react": "^18.0.21",
+        "@types/react-dom": "^18.0.6",
+        "@types/styled-components": "^5.1.26",
+        "typescript": "^4.8.3"
+    }
 }

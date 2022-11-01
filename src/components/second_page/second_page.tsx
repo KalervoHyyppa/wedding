@@ -4,6 +4,7 @@ import * as React from "react"
 import Background from './background'
 import Buttons from './buttons'
 import styled from 'styled-components'
+import ComingSoon from './coming_soon'
 
 
 const BackgroundContainer = styled.div`
@@ -21,7 +22,7 @@ const SecondPage = () => {
 
             <ParallaxLayer
                 offset={1}
-                speed={.3}
+                speed={.8}
 
                 style={{
                     display: 'flex',
@@ -29,7 +30,8 @@ const SecondPage = () => {
                     alignItems: 'center',
                     color: 'black',
                 }}>
-                <Buttons />
+                <ComingSoon />
+                {/* <Buttons /> */}
             </ParallaxLayer>
         </>
     )
