@@ -20,6 +20,16 @@ const FadeInDiv = styled.div`
     animation-delay: 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+
+    @keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 `
 
 const FirstPage = () => {
