@@ -5,6 +5,22 @@ import { graphql, useStaticQuery } from "gatsby"
 import styled from 'styled-components'
 import { BgImage } from "gbimage-bridge"
 
+
+const ImageStackDiv = styled.div`
+    display: grid;
+`
+
+interface Props {
+    isShowing: boolean;
+}
+
+const GridDiv = styled.div<Props>`
+  grid-column: 1;
+  grid-row: 1;
+  opacity: ${props => props.isShowing ? 100 : 0};
+  transition: all 500ms linear;
+`
+
 const MainBackground = () => {
 
     const imageQuery =
@@ -31,27 +47,48 @@ const MainBackground = () => {
             `
         )
 
-    console.log('QQQQ image query', imageQuery);
-    const [imageURL, setImageUrl] = useState(imageQuery.gallery.edges[0].node.childrenImageSharp[0].gatsbyImageData);
+    const [imageURL1, setImageUrl1] = useState(imageQuery.gallery.edges[0].node.childrenImageSharp[0].gatsbyImageData);
+    const [imageURL2, setImageUrl2] = useState(imageQuery.gallery.edges[1].node.childrenImageSharp[0].gatsbyImageData);
+    const [isShowingSlide1, setIsShowingSlide1] = useState(true);
+
 
     useEffect(() => {
-        let nextIndex = 0;
+        let nextIndex = 1;
+        let currentSlide = 0;
+
+        // Changes slides content
+        setTimeout(() => {
+            setInterval(() => {
+                // let nextIndex = currentImageIndex + 1
+                nextIndex += 1
+                const imagesLength = imageQuery.gallery.edges.length;
+
+                if (nextIndex >= imagesLength) {
+                    nextIndex = 0
+                }
+                if (currentSlide === 0) {
+                    setImageUrl2(imageQuery.gallery.edges[nextIndex].node.childrenImageSharp[0].gatsbyImageData)
+
+                } else {
+                    setImageUrl1(imageQuery.gallery.edges[nextIndex].node.childrenImageSharp[0].gatsbyImageData)
+                }
+
+            }, 5000)
+        }, 2500)
+
+        // Changes slide visibility
         setInterval(() => {
-            // let nextIndex = currentImageIndex + 1
-            nextIndex += 1
-            const imagesLength = imageQuery.gallery.edges.length;
-            console.log('QQQQ image length', imagesLength)
-
-            console.log('QQQQ next index before', nextIndex);
-            if (nextIndex >= imagesLength) {
-                nextIndex = 0
+            // If current slide is 0, then its on the 1st slide
+            if (currentSlide === 0) {
+                setIsShowingSlide1(false);
+                currentSlide = 1;
+            } else {
+                setIsShowingSlide1(true);
+                currentSlide = 0;
             }
-            console.log('QQQQ next index after', nextIndex);
-
-
-            setImageUrl(imageQuery.gallery.edges[nextIndex].node.childrenImageSharp[0].gatsbyImageData)
-
         }, 5000)
+
+
     }, [])
     // const { placeholderImage } = useStaticQuery(
     //     graphql`
@@ -77,20 +114,17 @@ const MainBackground = () => {
 
 
     return (
-        <GatsbyImage style={{ height: '100vh', backgroundColor: 'black' }} image={imageURL} alt={'q'} />
-    )
-    return (
+        <ImageStackDiv >
+            <GridDiv isShowing={isShowingSlide1}>
+                <GatsbyImage style={{ height: '100vh', backgroundColor: 'black' }} image={imageURL1} alt={'Slide 1'} />
+            </GridDiv>
 
-        <>
-            {imageQuery.gallery.edges.map((edge: any) => {
-                console.log('QQQQ node', edge);
-                console.log('QQQQ child', edge.node.childrenImageSharp);
-                console.log('QQQQ data', edge.node.childrenImageSharp[0].gatsbyImageData);
-                return <GatsbyImage image={edge.node.childrenImageSharp[0].gatsbyImageData} alt={'q'} />
-            })}
-        </>
-
+            <GridDiv isShowing={!isShowingSlide1}>
+                <GatsbyImage style={{ height: '100vh', backgroundColor: 'black' }} image={imageURL2} alt={'Slide 2'} />
+            </GridDiv>
+        </ImageStackDiv>
     )
+
 
 }
 
