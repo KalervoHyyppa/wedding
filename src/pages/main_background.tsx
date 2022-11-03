@@ -35,7 +35,7 @@ const MainBackground = () => {
                             publicURL
                             childrenImageSharp {
                             gatsbyImageData(
-                                transformOptions: {fit: COVER}
+                                transformOptions: {fit: CONTAIN}
                                 placeholder: BLURRED
                                 webpOptions: {quality: 50}
                             )
@@ -116,11 +116,11 @@ const MainBackground = () => {
     return (
         <ImageStackDiv >
             <GridDiv isShowing={isShowingSlide1}>
-                <GatsbyImage style={{ height: '100vh', backgroundColor: 'black' }} image={imageURL1} alt={'Slide 1'} />
+                <GatsbyImage objectFit="cover" style={{ height: '100vh', width: '100%', backgroundColor: 'black' }} image={imageURL1} alt={'Slide 1'} />
             </GridDiv>
 
             <GridDiv isShowing={!isShowingSlide1}>
-                <GatsbyImage style={{ height: '100vh', backgroundColor: 'black' }} image={imageURL2} alt={'Slide 2'} />
+                <GatsbyImage objectFit="cover" style={{ height: '100vh', width: '100%', backgroundColor: 'black' }} image={imageURL2} alt={'Slide 2'} />
             </GridDiv>
         </ImageStackDiv>
     )

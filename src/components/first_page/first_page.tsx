@@ -10,6 +10,7 @@ const ImagesDiv = styled.div`
     position: absolute;
     z-index: -1;
     height: 100vh;
+    width: 100%;
     background-color: black;
 `
 

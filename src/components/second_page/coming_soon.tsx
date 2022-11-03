@@ -41,7 +41,7 @@ const ComingSoon = () => {
             <h1>Join Us</h1>
 
             <TextDiv>
-                <H2>September 22 (PS. Thats a Friday!):</H2>
+                <H2>Friday, September 22, 2023:</H2>
                 <H2i>Ceremony and Reception</H2i>
             </TextDiv>
 
