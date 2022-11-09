@@ -49,7 +49,7 @@ const FirstPage = () => {
             </ParallaxLayer>
             <ParallaxLayer
                 offset={0}
-                speed={0.7}
+                speed={1.5}
                 style={{
                     display: 'flex',
                     justifyContent: 'flex-start',
@@ -66,7 +66,7 @@ const FirstPage = () => {
 
                 <ParallaxLayer
                     offset={0}
-                    speed={0.7}
+                    speed={1.5}
                     style={{
                         display: 'flex',
                         justifyContent: 'flex-end',
@@ -82,7 +82,7 @@ const FirstPage = () => {
             <FadeInDiv>
                 <ParallaxLayer
                     offset={0}
-                    speed={.9}
+                    speed={1.2}
                     style={{
                         display: 'flex',
                         justifyContent: 'flex-end',
