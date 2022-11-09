@@ -37,7 +37,6 @@ const MainBackground = () => {
                             gatsbyImageData(
                                 transformOptions: {fit: CONTAIN}
                                 placeholder: BLURRED
-                                webpOptions: {quality: 50}
                             )
                             }
                         }
