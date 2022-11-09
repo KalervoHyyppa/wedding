@@ -8,13 +8,15 @@ const ComingSoonDiv = styled.div`
     padding-left: 2rem;
     padding-right: 2rem;
     margin: 2rem;
-    /* width: 15rem; */
     background: rgba(255, 255, 255, 0.2);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 25rem;
+    @media (max-width: 768px) {
+        height: 20rem;
+    }
 `
 
 const BottomDiv = styled.div`
