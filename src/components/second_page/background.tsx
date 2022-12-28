@@ -5,10 +5,13 @@ import SvgLakeNoSunMountains01 from "../../svg/LakeNoSunMountains01"
 import SvgLakeNoSunLake01 from "../../svg/LakeNoSunLake01"
 import SvgLakeNoSunIslands01 from "../../svg/LakeNoSunIslands01"
 import SvgLakeNoSunTrees01 from "../../svg/LakeNoSunTrees01"
+import MinimalistMtnBlue from "../../svg/MinimalistMtnBlue"
+import MinimalistMtnYellow from "../../svg/MinimalistMtnYellow"
+import MinimalistMtnOrange from "../../svg/MinimalistMtnOrange"
 
 
 
-const CloudsLayer = ({ offset = 1, speed = 1 }) => {
+const BlueLayer = ({ offset = 1, speed = 1 }) => {
 
 
     return (
@@ -16,112 +19,70 @@ const CloudsLayer = ({ offset = 1, speed = 1 }) => {
             offset={offset}
             speed={speed}
             style={{
-                height: '100%',
+                // height: '100%',
                 display: 'flex',
-                alignItems: 'center',
-                flexDirection: 'column',
+                alignItems: 'end',
+                justifyContent: 'center',
             }}
         >
-            <SvgLakeNoSunClouds01
-                height='100%'
+            <MinimalistMtnBlue
+                height='100vh'
             />
         </ParallaxLayer>
     )
 }
 
-const MountainLayer = ({ offset = 1, speed = 1 }) => {
+const YellowLayer = ({ offset = 1, speed = 1 }) => {
+
+
     return (
         <ParallaxLayer
             offset={offset}
             speed={speed}
             style={{
-                height: '100%',
+                // height: '100%',
                 display: 'flex',
-                alignItems: 'center',
-                flexDirection: 'column',
+                alignItems: 'end',
+                justifyContent: 'center',
             }}
         >
-            <SvgLakeNoSunMountains01
-                height='100%'
-            />
-            {/* <StaticImage
-                src="../images/Lake_noSun_mountains-01.svg"
-                alt="QQ"
-                style={{ height: '100vh' }}
-                placeholder="blurred"
-            /> */}
-        </ParallaxLayer>
-    )
-}
-
-const LakeLayer = ({ offset = 1, speed = 1 }) => {
-    return (
-        <ParallaxLayer
-            offset={offset}
-            speed={speed}
-            style={{
-                height: '100%',
-            }}
-        >
-            <SvgLakeNoSunLake01
-                height='100%'
-
+            <MinimalistMtnYellow
+                height='100vh'
             />
         </ParallaxLayer>
     )
 }
 
-const IslandLayer = ({ offset = 1, speed = 1 }) => {
+const OrangeLayer = ({ offset = 1, speed = 1 }) => {
+
+
     return (
         <ParallaxLayer
             offset={offset}
             speed={speed}
             style={{
-                height: '100%',
+                // height: '100%',
                 display: 'flex',
-                alignItems: 'center',
-                flexDirection: 'column',
+                alignItems: 'end',
+                justifyContent: 'center',
             }}
         >
-            <SvgLakeNoSunIslands01
-                height='100%'
-
+            <MinimalistMtnOrange
+                height='100vh'
             />
         </ParallaxLayer>
     )
 }
-const TreeLayer = ({ offset = 1, speed = 1 }) => {
-    return (
-        <ParallaxLayer
-            offset={offset}
-            speed={speed}
-            style={{
-                height: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                flexDirection: 'column',
-            }}
-        >
-            <SvgLakeNoSunTrees01
-                height='100%'
-
-            />
-        </ParallaxLayer>
-    )
-}
-
 
 const Background = () => {
 
     return (
         <>
 
-            <CloudsLayer offset={1} speed={0.35} />
+            <OrangeLayer offset={1} speed={0.05} />
+            <YellowLayer offset={1} speed={0.5} />
+            <BlueLayer offset={1} speed={.9} />
 
-            <MountainLayer offset={1} speed={0.4} />
-            <LakeLayer offset={1} speed={0.45} />
-            <IslandLayer offset={1} speed={0.5} />
-            <TreeLayer offset={1} speed={0.55} />
 
         </>
     )

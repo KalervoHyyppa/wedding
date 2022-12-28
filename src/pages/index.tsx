@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useRef, useEffect } from "react"
 import type { HeadFC } from "gatsby"
 import { IParallax, Parallax } from '@react-spring/parallax'
 import styled from 'styled-components'
@@ -15,11 +15,14 @@ const MainDiv = styled.div`
     height: 100%;
     width: 100%;
     align-items: center;
-    background: linear-gradient(#e66465, #9198e5);
+    background: #e6e6e6;
+    /* background: linear-gradient(#e66465, #9198e5); */
 `
 
 const IndexPage = () => {
     const parallax = useRef<IParallax>(null!)
+
+
     return (
         <MainDiv>
             <Parallax pages={2} style={{ top: '0', left: '0' }} >

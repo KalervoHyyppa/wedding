@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useEffect } from "react"
 import { ParallaxLayer } from '@react-spring/parallax'
 import MainText from "./main_text";
 import Images from "../../pages/main_background";
@@ -33,12 +33,49 @@ const FadeInDiv = styled.div`
 }
 `
 
+const MainDiv = styled.div`
+`
+
 const FirstPage = () => {
+    function fadeOutOnScroll() {
+        let element = document.getElementById('header');
+        if (!element) {
+            return;
+        }
+
+        var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+        var elementHeight = element.clientHeight;
+        var scrollTop = document.documentElement.scrollTop;
+
+
+        var opacity = 1;
+
+        if (scrollTop > distanceToTop) {
+            opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
+        }
+        if (opacity >= 0) {
+            element.style.opacity = opacity.toString();
+        }
+    }
+
+
+
+    useEffect(() => {
+
+        // window.addEventListener('scroll', () => {
+        //     // fadeOutOnScroll();
+        // }, true);
+
+    }, [])
+
+
+
     return (
-        <>
+        <MainDiv >
             <ParallaxLayer
                 offset={0}
-                speed={1}
+                speed={1.1}
+                id="header"
 
             // style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: "column" }}
             >
@@ -95,7 +132,7 @@ const FirstPage = () => {
 
                 </ParallaxLayer>
             </FadeInDiv>
-        </>
+        </MainDiv>
     )
 }
 
