@@ -1,23 +1,20 @@
 
 import { ParallaxLayer } from '@react-spring/parallax'
 import * as React from "react"
-import Background from './background'
-import Buttons from './buttons'
 import styled from 'styled-components'
-import ComingSoon from './coming_soon'
-import JoinUs from './join_us'
+
 
 
 const BackgroundContainer = styled.div`
     height: 100%;
 `
 
-const SecondPage = () => {
+const ThirdPage = () => {
 
     return (
         <>
             <ParallaxLayer
-                offset={1}
+                offset={2}
                 speed={.9}
 
                 style={{
@@ -25,12 +22,8 @@ const SecondPage = () => {
                     justifyContent: 'center',
                     // alignItems: 'center',
                     color: 'black',
-                }}
-            >
-                <JoinUs />
+                }}>
             </ParallaxLayer>
-
-
 
 
 
@@ -38,4 +31,4 @@ const SecondPage = () => {
     )
 }
 
-export default SecondPage
+export default ThirdPage

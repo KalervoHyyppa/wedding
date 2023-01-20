@@ -39,6 +39,7 @@ const YellowLayer = ({ offset = 1, speed = 1 }) => {
         <ParallaxLayer
             offset={offset}
             speed={speed}
+            sticky={{ start: 1 }}
             style={{
                 // height: '100%',
                 display: 'flex',
@@ -53,13 +54,14 @@ const YellowLayer = ({ offset = 1, speed = 1 }) => {
     )
 }
 
-const OrangeLayer = ({ offset = 1, speed = 1 }) => {
+export const OrangeLayer = ({ offset = 1, speed = 1 }) => {
 
 
     return (
         <ParallaxLayer
             offset={offset}
             speed={speed}
+            sticky={{ start: 1 }}
             style={{
                 // height: '100%',
                 display: 'flex',
