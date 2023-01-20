@@ -9,8 +9,8 @@ export const Parent = (props: any, component: React.ReactElement) => (
     <SVG
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        viewBox={"0 0 3688 3215"}
-        preserveAspectRatio="xMinYMin meet"
+        viewBox={"0 0 3000 2860"}
+        // preserveAspectRatio="xMinYMin meet"
         {...props}
 
     >

@@ -2,17 +2,19 @@ import React, { useRef, useEffect } from "react"
 import type { HeadFC } from "gatsby"
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax'
 import styled from 'styled-components'
-
-import './index.css';
-import FirstPage from "../components/first_page/first_page";
-import SecondPage from "../components/second_page/second_page";
-import ThirdPage from "../components/third_page/third_page";
-import Background, { OrangeLayer } from "../components/second_page/background";
-import MinimalistMtnOrange from "../svg/MinimalistMtnOrange";
-import MinimalistMtnYellow from "../svg/MinimalistMtnYellow";
-import MinimalistMtnBlue from "../svg/MinimalistMtnBlue";
-import JoinUs from "../components/second_page/join_us";
-
+import { FrontBushes } from "../svg/new_lake/front_bushes"
+import { TreesAndStones } from "../svg/new_lake/trees_and_stones"
+import { MiddleIslands } from "../svg/new_lake/middle_islands"
+import { Sun } from "../svg/new_lake/sun"
+import { Cloud3 } from "../svg/new_lake/cloud_3"
+import { Mountain6 } from "../svg/new_lake/mountain_6"
+import { Mountain5 } from "../svg/new_lake/mountain_5"
+import { Cloud1 } from "../svg/new_lake/cloud_1"
+import { Mountain4 } from "../svg/new_lake/mountain_4"
+import { Mountain3 } from "../svg/new_lake/mountain_3"
+import { Cloud2 } from "../svg/new_lake/cloud_2"
+import { Mountain2 } from "../svg/new_lake/mountain_2"
+import { Mountain1 } from "../svg/new_lake/mountain_1"
 
 const MainDiv = styled.div`
     display: flex;
@@ -25,53 +27,30 @@ const MainDiv = styled.div`
     /* background: linear-gradient(#e66465, #9198e5); */
 `
 
-const OrangeBlock = styled.div`
-    height: 200%;
-    width: 100%;
-    background: #ffab38;
-`
-
-const YellowBlock = styled.div`
-    height: 200%;
-    width: 100%;
-    background: #f7c300;
-`
-
-const BlueBlock = styled.div`
-    height: 200%;
-    width: 100%;
-    background: #b3dcd4;
-`
-
 const IndexPage = () => {
 
-    const myRef = useRef<HTMLInputElement>(null);
+    console.log('QQQQ yo');
 
-    const handleScroll = () => {
-        const position = window.pageYOffset
+    const width = '100%'
+    const minWidth = '37rem'
 
-        console.log('QQQQ position', position);
-        if (myRef.current) {
-            console.log('QQQQ position 1', position);
-            const rect = myRef.current.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom >= 0) {
-            } else {
-            }
-        }
-    };
-    useEffect(() => {
-        console.log('QQQQ useffect 1');
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
+    const vb1 = 3000
+    const vb2 = 2860
 
+    const kStart = 1
+    const kEnd = 8
+
+    const cloudOffset = 1.5
+    const cloudSpeed = 0.5
+
+
+    const sunOffset = 2
+    const sunSpeed = .9
 
     return (
-        <MainDiv ref={myRef}>
+        <MainDiv >
             <Parallax
-                pages={5}
+                pages={6}
                 style={{ top: '0', left: '0' }}
                 config={{
                     mass: .5,
@@ -80,80 +59,60 @@ const IndexPage = () => {
                 }}
             >
 
-                <FirstPage />
-
-                {/******************************** 
-                 * 
-                 * Waves
-                 * 
-                ********************************/}
-
                 <ParallaxLayer
-
-                    sticky={{ start: 1, end: 5 }}
-
+                    offset={sunOffset}
+                    speed={sunSpeed}
                     style={{
-                        display: 'flex',
-                        zIndex: -1,
-                        justifyContent: 'center',
-                        // alignItems: 'center',
-                        color: 'black',
-                    }}
-                >
-                    <JoinUs />
-                </ParallaxLayer>
-
-                <ParallaxLayer
-                    offset={1.3}
-                    speed={0.05}
-                    // sticky={{ start: 1 }}
-                    style={{
-                        // height: '100%',
-                        zIndex: 1,
                         display: 'flex',
                         alignItems: 'end',
                         justifyContent: 'center',
                     }}
                 >
-                    <MinimalistMtnOrange
-                        height='100vh'
+                    <Sun
+                        width={width}
+                        style={{ minWidth: minWidth }}
+
                     />
                 </ParallaxLayer>
 
-                <ParallaxLayer
-                    offset={2.2}
-                    speed={0.05}
-                    style={{
-                        zIndex: 1,
-
-                    }}
-                >
-                    <OrangeBlock />
-                </ParallaxLayer>
 
                 <ParallaxLayer
-
-                    sticky={{ start: 1.1, end: 2 }}
+                    offset={cloudOffset}
+                    speed={cloudSpeed}
+                    horizontal={true}
                     style={{
-                        // height: '100%',
                         display: 'flex',
                         alignItems: 'end',
                         justifyContent: 'center',
                     }}
                 >
-                    <MinimalistMtnYellow
-                        height='100vh'
+                    <Cloud3
+                        width={width}
+                        style={{ minWidth: minWidth }}
+
                     />
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: 3 }}
+
+                    sticky={{ start: kStart + .45, end: kEnd }}
+
+                    style={{
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
                 >
-                    <YellowBlock />
+                    <Mountain6
+                        width={width}
+                        style={{ minWidth: minWidth }}
+
+                    />
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: 0.9, end: 3 }}
+                    sticky={{ start: kStart + .4, end: kEnd }}
+
                     style={{
                         // height: '100%',
                         display: 'flex',
@@ -161,21 +120,174 @@ const IndexPage = () => {
                         justifyContent: 'center',
                     }}
                 >
-                    <MinimalistMtnBlue
-                        height='100vh'
+                    <Mountain5
+                        width={width}
+                        style={{ minWidth: minWidth }}
+
                     />
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: 4 }}
+                    offset={cloudOffset}
+                    speed={cloudSpeed}
+                    horizontal={true}
+
+                    style={{
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
                 >
-                    <BlueBlock />
+                    <Cloud1
+                        width={width}
+                        style={{ minWidth: minWidth }}
+
+                    />
                 </ParallaxLayer>
+
+                <ParallaxLayer
+
+                    sticky={{ start: kStart + .35, end: kEnd }}
+
+                    style={{
+                        // height: '100%',
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <Mountain4
+                        width={width}
+                        style={{ minWidth: minWidth }}
+
+                    />
+                </ParallaxLayer>
+
+                <ParallaxLayer
+                    sticky={{ start: kStart + .3, end: kEnd }}
+
+
+                    style={{
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <Mountain3
+                        width={width}
+                        style={{ minWidth: minWidth }}
+
+                    />
+                </ParallaxLayer>
+
+                <ParallaxLayer
+                    offset={cloudOffset}
+                    speed={cloudSpeed}
+                    horizontal={true}
+
+                    style={{
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <Cloud2
+                        width={width}
+                        style={{ minWidth: minWidth }}
+
+                    />
+                </ParallaxLayer>
+
+                <ParallaxLayer
+                    sticky={{ start: kStart + .25, end: kEnd }}
+
+                    style={{
+                        // height: '100%',
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <Mountain2
+                        width={width}
+                        style={{ minWidth: minWidth }}
+
+                    />
+                </ParallaxLayer>
+
+                <ParallaxLayer
+                    sticky={{ start: kStart + .2, end: kEnd }}
+
+                    style={{
+                        // height: '100%',
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <Mountain1
+                        width={width}
+                        style={{ minWidth: minWidth }}
+
+                    />
+                </ParallaxLayer>
+
+                <ParallaxLayer
+                    sticky={{ start: kStart + .15, end: kEnd }}
+
+                    style={{
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <MiddleIslands
+                        width={width}
+                        style={{ minWidth: minWidth }}
+
+                    />
+                </ParallaxLayer>
+
+                <ParallaxLayer
+                    sticky={{ start: kStart + .1, end: kEnd }}
+
+                    style={{
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <TreesAndStones
+                        width={width}
+                        style={{ minWidth: minWidth }}
+
+                    />
+                </ParallaxLayer>
+                <ParallaxLayer
+                    sticky={{ start: kStart + .05, end: kEnd }}
+
+                    style={{
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <FrontBushes
+                        width={width}
+                        style={{ minWidth: minWidth }}
+
+                    />
+                </ParallaxLayer>
+
+
+
+
 
 
             </Parallax>
         </MainDiv>
     )
+
 }
 
 export default IndexPage
