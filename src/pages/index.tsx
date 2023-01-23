@@ -28,8 +28,14 @@ const MainDiv = styled.div`
     height: 100%;
     width: 100%;
     align-items: center;
+    /* background: #e6e6e6; */
+    background: linear-gradient(#e66465, #9198e5);
+`
+
+const OffWhiteBlock = styled.div`
+    height: 200%;
+    width: 100%;
     background: #e6e6e6;
-    /* background: linear-gradient(#e66465, #9198e5); */
 `
 
 const OrangeBlock = styled.div`
@@ -58,6 +64,7 @@ const IndexPage = () => {
     const vb2 = 2860
     const kStart = .8
     const kEnd = 8
+    const k3rdSectionStart = kStart + 1.75
     const kSpeed = 0.9
     const kPages = 5
     const kStartOpacity = .150
@@ -81,6 +88,21 @@ const IndexPage = () => {
             const denominator = end - start;
 
             return diffFromStart / denominator;
+        }
+    }
+
+    function getOpacityEnd(end: number, currentScrollPosition: number) {
+
+        const start = end - .01
+        if (currentScrollPosition < start) return 1
+        else if (currentScrollPosition > end) return 0
+        else {
+
+            const diffFromEnd = end - currentScrollPosition;
+            const denominator = end - start;
+
+            return diffFromEnd / denominator;
+
         }
     }
 
@@ -379,11 +401,17 @@ const IndexPage = () => {
                  * Waves
                  * 
                 ********************************/}
+                {/* 
+                <ParallaxLayer
+                    sticky={{ start: k3rdSectionStart }}
+                >
+                    <OffWhiteBlock />
+                </ParallaxLayer> */}
 
 
 
                 <ParallaxLayer
-                    sticky={{ start: kStart + 1.35, end: kStart + 1.25 }}
+                    sticky={{ start: k3rdSectionStart + .35, end: k3rdSectionStart + .35 }}
 
                     style={{
                         // height: '100%',
@@ -398,7 +426,7 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: kStart + 2.2 }}
+                    sticky={{ start: k3rdSectionStart + 1.2 }}
 
                     style={{
 
@@ -409,7 +437,7 @@ const IndexPage = () => {
 
                 <ParallaxLayer
 
-                    sticky={{ start: kStart + 1.25, end: kStart + 2.25 }}
+                    sticky={{ start: k3rdSectionStart + .25, end: k3rdSectionStart + 1.25 }}
                     style={{
                         // height: '100%',
                         display: 'flex',
@@ -423,13 +451,13 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: kStart + 3.2 }}
+                    sticky={{ start: k3rdSectionStart + 2.2 }}
                 >
                     <YellowBlock />
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: kStart + 1.15, end: kStart + 3.25 }}
+                    sticky={{ start: k3rdSectionStart + .15, end: k3rdSectionStart + 2.25 }}
 
                     style={{
                         // height: '100%',
@@ -444,7 +472,7 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: kStart + 4.2 }}
+                    sticky={{ start: k3rdSectionStart + 3.2 }}
 
                 >
                     <BlueBlock />
