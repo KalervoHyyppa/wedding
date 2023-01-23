@@ -139,7 +139,11 @@ const IndexPage = () => {
         <MainDiv ref={myRef} className='my-class-name'>
             <Parallax
                 pages={kPages}
-                style={{ top: '0', left: '0' }}
+                style={{
+                    top: '0', left: '0',
+                    background: "linear-gradient(#e66465, #9198e5)",
+
+                }}
                 config={{
                     mass: .5,
                     friction: 20,
@@ -168,7 +172,7 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
 
-                <ParallaxLayer
+                {/* <ParallaxLayer
                     offset={kStart + .99}
                     speed={kSpeed}
                     horizontal={true}
@@ -184,7 +188,7 @@ const IndexPage = () => {
                         style={{ minWidth: minWidth }}
 
                     />
-                </ParallaxLayer>
+                </ParallaxLayer> */}
 
                 <ParallaxLayer
 
@@ -222,7 +226,7 @@ const IndexPage = () => {
                     />
                 </ParallaxLayer>
 
-                <ParallaxLayer
+                {/* <ParallaxLayer
                     offset={kStart + .99}
                     speed={kSpeed}
                     horizontal={true}
@@ -239,7 +243,7 @@ const IndexPage = () => {
                         style={{ minWidth: minWidth }}
 
                     />
-                </ParallaxLayer>
+                </ParallaxLayer> */}
 
                 <ParallaxLayer
 
@@ -277,7 +281,7 @@ const IndexPage = () => {
                     />
                 </ParallaxLayer>
 
-                <ParallaxLayer
+                {/* <ParallaxLayer
                     offset={kStart + .99}
                     speed={kSpeed}
                     horizontal={true}
@@ -294,7 +298,7 @@ const IndexPage = () => {
                         style={{ minWidth: minWidth }}
 
                     />
-                </ParallaxLayer>
+                </ParallaxLayer> */}
 
                 <ParallaxLayer
                     sticky={{ start: kStart + .25, end: kEnd }}

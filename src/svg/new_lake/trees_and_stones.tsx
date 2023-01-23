@@ -70,13 +70,13 @@ export const TreesAndStones = (props: any) => Parent(props,
         </g>
         <g>
             <path d="m163.75,2354.94c139.36,0,255.81-68.92,284.25-160.94H0v125.46c46.64,22.39,103.02,35.48,163.75,35.48Z" style={{
-                fill: "url(#linear-gradient-32)", opacity: ".33",
+                fill: "url(#linear-gradient-32)", fillOpacity: ".33",
             }} />
             <path d="m448,2194c-28.44-92.02-144.89-160.94-284.25-160.94-60.73,0-117.11,13.09-163.75,35.48v125.46h448Z" style={{
                 fill: "url(#linear-gradient-33)",
             }} />
             <g>
-                <g style={{ opacity: ".3", }}>
+                <g style={{ fillOpacity: ".3", }}>
                     <path d="m205,2208c18.61,60.62,94.81,106.02,186,106.02s167.39-45.4,186-106.02H205Z" style={{
                         fill: "url(#linear-gradient-34)",
                     }} />
@@ -94,7 +94,7 @@ export const TreesAndStones = (props: any) => Parent(props,
                 </g>
             </g>
             <g>
-                <g style={{ opacity: ".3", }}>
+                <g style={{ fillOpacity: ".3", }}>
                     <path d="m650.5,2101c10.73,34.72,54.67,60.72,107.25,60.72s96.52-26.01,107.25-60.72h-214.5Z" style={{
                         fill: "url(#linear-gradient-38)",
                     }} />
@@ -113,7 +113,7 @@ export const TreesAndStones = (props: any) => Parent(props,
             </g>
         </g>
         <g>
-            <g style={{ opacity: ".3", }}>
+            <g style={{ fillOpacity: ".3", }}>
                 <path d="m2987,2098c-16.28,52.69-82.96,92.15-162.75,92.15s-146.47-39.46-162.75-92.15h325.5Z" style={{
                     fill: "url(#linear-gradient-42)",
                 }} />
@@ -146,7 +146,7 @@ export const TreesAndStones = (props: any) => Parent(props,
             fill: "url(#linear-gradient-50)",
         }} />
         <path d="m2969.5,2260.58c10.38,0,20.57-.7,30.5-2.03v-124.55h-218c18.76,72.37,95.57,126.58,187.5,126.58Z" style={{
-            fill: "url(#linear-gradient-51)", opacity: ".26",
+            fill: "url(#linear-gradient-51)", fillOpacity: ".26",
         }} />
     </g>
 )
