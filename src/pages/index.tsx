@@ -51,7 +51,7 @@ const YellowBlock = styled.div`
 `
 
 const BlueBlock = styled.div`
-    height: 200%;
+    height: 300%;
     width: 100%;
     background: #b3dcd4;
 `
@@ -66,7 +66,7 @@ const IndexPage = () => {
     const kEnd = 8
     const k3rdSectionStart = kStart + 1.75
     const kSpeed = 0.9
-    const kPages = 5
+    const kPages = 4
     const kStartOpacity = .150
 
 
