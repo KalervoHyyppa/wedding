@@ -1,14 +1,17 @@
 import * as React from "react"
 import styled from 'styled-components'
 
+interface Props {
+    percentScrolled: number;
+}
+
+
 const ComingSoonDiv = styled.div`
     border-radius: 1.5rem;
     border: none;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(30px);
     padding-left: 2rem;
     padding-right: 2rem;
-    margin: 2rem;
-    background: rgba(255, 255, 255, 0.2);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: column;
@@ -17,6 +20,7 @@ const ComingSoonDiv = styled.div`
     @media (max-width: 768px) {
         height: 20rem;
     }
+    
 `
 
 const BottomDiv = styled.div`
@@ -62,7 +66,7 @@ const TopDiv = styled.div`
 
 const ComingSoon = () => {
     return (
-        <ComingSoonDiv>
+        <ComingSoonDiv >
             <TopDiv>
                 <h1>Join Us</h1>
                 <HR />

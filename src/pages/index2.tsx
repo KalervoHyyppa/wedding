@@ -66,112 +66,114 @@ const IndexPage = () => {
 
 
     return (
-        <MainDiv ref={myRef}>
-            <Parallax
-                pages={5}
-                style={{ top: '0', left: '0' }}
-                config={{
-                    mass: .5,
-                    friction: 20,
-                    tension: 150,
-                }}
-            >
+        <div ref={myRef}>
+            <MainDiv >
+                <Parallax
+                    pages={5}
+                    style={{ top: '0', left: '0' }}
+                    config={{
+                        mass: .5,
+                        friction: 20,
+                        tension: 150,
+                    }}
+                >
 
-                <FirstPage />
+                    <FirstPage />
 
-                {/******************************** 
+                    {/******************************** 
                  * 
                  * Waves
                  * 
                 ********************************/}
 
-                <ParallaxLayer
+                    <ParallaxLayer
 
-                    sticky={{ start: 1, end: 5 }}
+                        sticky={{ start: 1, end: 5 }}
 
-                    style={{
-                        display: 'flex',
-                        zIndex: -1,
-                        justifyContent: 'center',
-                        // alignItems: 'center',
-                        color: 'black',
-                    }}
-                >
-                    <JoinUs />
-                </ParallaxLayer>
+                        style={{
+                            display: 'flex',
+                            zIndex: -1,
+                            justifyContent: 'center',
+                            // alignItems: 'center',
+                            color: 'black',
+                        }}
+                    >
+                        <JoinUs />
+                    </ParallaxLayer>
 
-                <ParallaxLayer
-                    offset={1.3}
-                    speed={0.05}
-                    // sticky={{ start: 1 }}
-                    style={{
-                        // height: '100%',
-                        zIndex: 1,
-                        display: 'flex',
-                        alignItems: 'end',
-                        justifyContent: 'center',
-                    }}
-                >
-                    <MinimalistMtnOrange
-                        height='100vh'
-                    />
-                </ParallaxLayer>
+                    <ParallaxLayer
+                        offset={1.3}
+                        speed={0.05}
+                        // sticky={{ start: 1 }}
+                        style={{
+                            // height: '100%',
+                            zIndex: 1,
+                            display: 'flex',
+                            alignItems: 'end',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <MinimalistMtnOrange
+                            height='100vh'
+                        />
+                    </ParallaxLayer>
 
-                <ParallaxLayer
-                    offset={2.2}
-                    speed={0.05}
-                    style={{
-                        zIndex: 1,
+                    <ParallaxLayer
+                        offset={2.2}
+                        speed={0.05}
+                        style={{
+                            zIndex: 1,
 
-                    }}
-                >
-                    <OrangeBlock />
-                </ParallaxLayer>
+                        }}
+                    >
+                        <OrangeBlock />
+                    </ParallaxLayer>
 
-                <ParallaxLayer
+                    <ParallaxLayer
 
-                    sticky={{ start: 1.1, end: 2 }}
-                    style={{
-                        // height: '100%',
-                        display: 'flex',
-                        alignItems: 'end',
-                        justifyContent: 'center',
-                    }}
-                >
-                    <MinimalistMtnYellow
-                        height='100vh'
-                    />
-                </ParallaxLayer>
+                        sticky={{ start: 1.1, end: 2 }}
+                        style={{
+                            // height: '100%',
+                            display: 'flex',
+                            alignItems: 'end',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <MinimalistMtnYellow
+                            height='100vh'
+                        />
+                    </ParallaxLayer>
 
-                <ParallaxLayer
-                    sticky={{ start: 3 }}
-                >
-                    <YellowBlock />
-                </ParallaxLayer>
+                    <ParallaxLayer
+                        sticky={{ start: 3 }}
+                    >
+                        <YellowBlock />
+                    </ParallaxLayer>
 
-                <ParallaxLayer
-                    sticky={{ start: 0.9, end: 3 }}
-                    style={{
-                        // height: '100%',
-                        display: 'flex',
-                        alignItems: 'end',
-                        justifyContent: 'center',
-                    }}
-                >
-                    <MinimalistMtnBlue
-                        height='100vh'
-                    />
-                </ParallaxLayer>
+                    <ParallaxLayer
+                        sticky={{ start: 0.9, end: 3 }}
+                        style={{
+                            // height: '100%',
+                            display: 'flex',
+                            alignItems: 'end',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <MinimalistMtnBlue
+                            height='100vh'
+                        />
+                    </ParallaxLayer>
 
-                <ParallaxLayer
-                    sticky={{ start: 4 }}
-                >
-                    <BlueBlock />
-                </ParallaxLayer>
+                    <ParallaxLayer
+                        sticky={{ start: 4 }}
+                    >
+                        <BlueBlock />
+                    </ParallaxLayer>
 
 
-            </Parallax>
-        </MainDiv>
+                </Parallax>
+            </MainDiv>
+        </div>
     )
 }
 

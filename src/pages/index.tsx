@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useEffect, useState } from "react"
 import type { HeadFC } from "gatsby"
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax'
 import styled from 'styled-components'
@@ -15,6 +15,11 @@ import { Mountain3 } from "../svg/new_lake/mountain_3"
 import { Cloud2 } from "../svg/new_lake/cloud_2"
 import { Mountain2 } from "../svg/new_lake/mountain_2"
 import { Mountain1 } from "../svg/new_lake/mountain_1"
+import ComingSoon from "../components/second_page/coming_soon"
+import FirstPage from "../components/first_page/first_page"
+import MinimalistMtnOrange from "../svg/MinimalistMtnOrange"
+import MinimalistMtnYellow from "../svg/MinimalistMtnYellow";
+import MinimalistMtnBlue from "../svg/MinimalistMtnBlue";
 
 const MainDiv = styled.div`
     display: flex;
@@ -27,30 +32,91 @@ const MainDiv = styled.div`
     /* background: linear-gradient(#e66465, #9198e5); */
 `
 
-const IndexPage = () => {
+const OrangeBlock = styled.div`
+    height: 200%;
+    width: 100%;
+    background: #ffab38;
+`
 
-    console.log('QQQQ yo');
+const YellowBlock = styled.div`
+    height: 200%;
+    width: 100%;
+    background: #f7c300;
+`
+
+const BlueBlock = styled.div`
+    height: 200%;
+    width: 100%;
+    background: #b3dcd4;
+`
+
+const IndexPage = () => {
 
     const width = '100%'
     const minWidth = '37rem'
-
     const vb1 = 3000
     const vb2 = 2860
-
-    const kStart = 1
+    const kStart = .8
     const kEnd = 8
+    const kSpeed = 0.9
+    const kPages = 5
+    const kStartOpacity = .150
 
-    const cloudOffset = 1.5
-    const cloudSpeed = 0.5
+
+    const kZBack = -1
+    const kZMiddle = 0
+    const kZFront = 100000000000000000
+
+    const [currentPercentScrolled, setCurrentPercentScrolled] = useState(0);
 
 
-    const sunOffset = 2
-    const sunSpeed = .9
+
+    function getOpacity(start: number, currentScrollPosition: number) {
+
+        const end = start + .01
+        if (currentScrollPosition < start) return 0
+        else if (currentScrollPosition > end) return 1
+        else {
+            const diffFromStart = currentScrollPosition - start;
+            const denominator = end - start;
+
+            return diffFromStart / denominator;
+        }
+    }
+
+    const myRef = useRef<any>(null);
+
+    const handleScroll2 = (e: any) => {
+        const height = myRef.current.clientHeight
+        const scrollablePages = kPages - 1 // because you can't scroll past the last page 
+        const scrollHeight = height * scrollablePages
+
+        const scrollTop = e.target.scrollTop
+        const percentScrolled = scrollTop / scrollHeight
+        setCurrentPercentScrolled(percentScrolled / 2)
+        // console.log('QQQQ percentScrolled', percentScrolled / 2);
+        // const currentPage = Math.floor(percentScrolled * scrollablePages)
+        // const currentPageScrollTop = scrollTop - (height * (currentPage))
+        // const currentPagePercent = currentPageScrollTop / height
+
+        // // because the ParallaxLayer below has an `offset` of `0`
+        // if (currentPage === 0) {
+        // }
+    }
+
+
+    useEffect(() => {
+        const container = document.querySelector('.my-class-name')
+        container!.addEventListener('scroll', handleScroll2, true)
+        return () => {
+            container!.removeEventListener('scroll', handleScroll2)
+        }
+    }, [])
 
     return (
-        <MainDiv >
+        <MainDiv ref={myRef} className='my-class-name'>
             <Parallax
-                pages={6}
+                pages={kPages}
                 style={{ top: '0', left: '0' }}
                 config={{
                     mass: .5,
@@ -59,10 +125,14 @@ const IndexPage = () => {
                 }}
             >
 
+                <FirstPage />
+
+
                 <ParallaxLayer
-                    offset={sunOffset}
-                    speed={sunSpeed}
+                    offset={kStart + .8}
+                    speed={kSpeed}
                     style={{
+                        zIndex: kZBack,
                         display: 'flex',
                         alignItems: 'end',
                         justifyContent: 'center',
@@ -77,10 +147,11 @@ const IndexPage = () => {
 
 
                 <ParallaxLayer
-                    offset={cloudOffset}
-                    speed={cloudSpeed}
+                    offset={kStart + .99}
+                    speed={kSpeed}
                     horizontal={true}
                     style={{
+                        zIndex: kZMiddle,
                         display: 'flex',
                         alignItems: 'end',
                         justifyContent: 'center',
@@ -98,6 +169,7 @@ const IndexPage = () => {
                     sticky={{ start: kStart + .45, end: kEnd }}
 
                     style={{
+                        zIndex: kZMiddle,
                         display: 'flex',
                         alignItems: 'end',
                         justifyContent: 'center',
@@ -115,6 +187,7 @@ const IndexPage = () => {
 
                     style={{
                         // height: '100%',
+                        zIndex: kZMiddle,
                         display: 'flex',
                         alignItems: 'end',
                         justifyContent: 'center',
@@ -128,11 +201,12 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    offset={cloudOffset}
-                    speed={cloudSpeed}
+                    offset={kStart + .99}
+                    speed={kSpeed}
                     horizontal={true}
 
                     style={{
+                        zIndex: kZMiddle,
                         display: 'flex',
                         alignItems: 'end',
                         justifyContent: 'center',
@@ -150,7 +224,7 @@ const IndexPage = () => {
                     sticky={{ start: kStart + .35, end: kEnd }}
 
                     style={{
-                        // height: '100%',
+                        zIndex: kZMiddle,
                         display: 'flex',
                         alignItems: 'end',
                         justifyContent: 'center',
@@ -168,6 +242,7 @@ const IndexPage = () => {
 
 
                     style={{
+                        zIndex: kZMiddle,
                         display: 'flex',
                         alignItems: 'end',
                         justifyContent: 'center',
@@ -181,11 +256,12 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    offset={cloudOffset}
-                    speed={cloudSpeed}
+                    offset={kStart + .99}
+                    speed={kSpeed}
                     horizontal={true}
 
                     style={{
+                        zIndex: kZMiddle,
                         display: 'flex',
                         alignItems: 'end',
                         justifyContent: 'center',
@@ -202,7 +278,7 @@ const IndexPage = () => {
                     sticky={{ start: kStart + .25, end: kEnd }}
 
                     style={{
-                        // height: '100%',
+                        zIndex: kZMiddle,
                         display: 'flex',
                         alignItems: 'end',
                         justifyContent: 'center',
@@ -219,7 +295,7 @@ const IndexPage = () => {
                     sticky={{ start: kStart + .2, end: kEnd }}
 
                     style={{
-                        // height: '100%',
+                        zIndex: kZMiddle,
                         display: 'flex',
                         alignItems: 'end',
                         justifyContent: 'center',
@@ -236,6 +312,7 @@ const IndexPage = () => {
                     sticky={{ start: kStart + .15, end: kEnd }}
 
                     style={{
+                        zIndex: kZMiddle,
                         display: 'flex',
                         alignItems: 'end',
                         justifyContent: 'center',
@@ -252,6 +329,7 @@ const IndexPage = () => {
                     sticky={{ start: kStart + .1, end: kEnd }}
 
                     style={{
+                        zIndex: kZMiddle,
                         display: 'flex',
                         alignItems: 'end',
                         justifyContent: 'center',
@@ -267,6 +345,7 @@ const IndexPage = () => {
                     sticky={{ start: kStart + .05, end: kEnd }}
 
                     style={{
+                        zIndex: kZMiddle,
                         display: 'flex',
                         alignItems: 'end',
                         justifyContent: 'center',
@@ -279,8 +358,97 @@ const IndexPage = () => {
                     />
                 </ParallaxLayer>
 
+                <ParallaxLayer
+                    sticky={{ start: kStart + .5, end: kEnd }}
+                    style={{
+                        zIndex: kZMiddle,
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                    }}
+                >
+                    <div style={{ opacity: getOpacity(kStartOpacity, currentPercentScrolled) }}>
+                        <ComingSoon />
+                    </div>
+
+                </ParallaxLayer>
 
 
+                {/******************************** 
+                 * 
+                 * Waves
+                 * 
+                ********************************/}
+
+
+
+                <ParallaxLayer
+                    sticky={{ start: kStart + 1.35, end: kStart + 1.25 }}
+
+                    style={{
+                        // height: '100%',
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <MinimalistMtnOrange
+                        height='100vh'
+                    />
+                </ParallaxLayer>
+
+                <ParallaxLayer
+                    sticky={{ start: kStart + 2.2 }}
+
+                    style={{
+
+                    }}
+                >
+                    <OrangeBlock />
+                </ParallaxLayer>
+
+                <ParallaxLayer
+
+                    sticky={{ start: kStart + 1.25, end: kStart + 2.25 }}
+                    style={{
+                        // height: '100%',
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <MinimalistMtnYellow
+                        height='100vh'
+                    />
+                </ParallaxLayer>
+
+                <ParallaxLayer
+                    sticky={{ start: kStart + 3.2 }}
+                >
+                    <YellowBlock />
+                </ParallaxLayer>
+
+                <ParallaxLayer
+                    sticky={{ start: kStart + 1.15, end: kStart + 3.25 }}
+
+                    style={{
+                        // height: '100%',
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <MinimalistMtnBlue
+                        height='100vh'
+                    />
+                </ParallaxLayer>
+
+                <ParallaxLayer
+                    sticky={{ start: kStart + 4.2 }}
+
+                >
+                    <BlueBlock />
+                </ParallaxLayer>
 
 
 

@@ -11,20 +11,20 @@
       }
     </style>
     <linearGradient id="linear-gradient" x1="1517.78" y1="569" x2="1517.78" y2="866.76" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#8df2ba"/>
-      <stop offset=".37" stop-color="#53c8a7"/>
-      <stop offset=".8" stop-color="#179c93"/>
-      <stop offset="1" stop-color="#008b8c"/>
+      <stop offset="0" stopColor="#8df2ba"/>
+      <stop offset=".37" stopColor="#53c8a7"/>
+      <stop offset=".8" stopColor="#179c93"/>
+      <stop offset="1" stopColor="#008b8c"/>
     </linearGradient>
     <linearGradient id="linear-gradient-2" x1="1477.99" y1="359.54" x2="1475.23" y2="2006.24" gradientUnits="userSpaceOnUse">
-      <stop offset=".4" stop-color="#008b8c"/>
-      <stop offset=".44" stop-color="#129891"/>
-      <stop offset=".52" stop-color="#37b39e"/>
-      <stop offset=".6" stop-color="#56caa8"/>
-      <stop offset=".68" stop-color="#6edbb0"/>
-      <stop offset=".78" stop-color="#7fe8b5"/>
-      <stop offset=".88" stop-color="#89efb8"/>
-      <stop offset="1" stop-color="#8df2ba"/>
+      <stop offset=".4" stopColor="#008b8c"/>
+      <stop offset=".44" stopColor="#129891"/>
+      <stop offset=".52" stopColor="#37b39e"/>
+      <stop offset=".6" stopColor="#56caa8"/>
+      <stop offset=".68" stopColor="#6edbb0"/>
+      <stop offset=".78" stopColor="#7fe8b5"/>
+      <stop offset=".88" stopColor="#89efb8"/>
+      <stop offset="1" stopColor="#8df2ba"/>
     </linearGradient>
   </defs>
   <path class="cls-1" d="M3066.94,805.77l-62.06-2.33-557.45-20.86s-99.13,.09-117.52-.6h0c-.97-.04-1.71-.07-2.2-.11-9.42-.77-38.3-5.83-40.95-6.3-.05,0-.08,0-.11-.02-.06,0-.09-.02-.09-.02,0,0-.01,0-.03,0-1.21-.44-43.48-29.53-43.48-29.53,0,0-47.69,7.55-53.03,8.34h-.01c-.21,.04-.36,.05-.48,.07-.11,.02-.17,.03-.17,.03,0,0-.08,0-.23-.03-3.22-.35-44.47-.78-44.47-.78l-1.48,.78-25.92,2.85-37.74,7.41s-36.35-2.8-37.04-2.84h-.01s-3.81-3.3-8.62-7.42c-8.07-6.93-18.97-16.18-19.47-16.12-.8,.1-17.88,0-17.88,0l-50.49,6.04s-18.94,1.4-31.33,5l-23.46-4.3c-1.6,.47-3.72,1.33-3.72,1.33l-11.23,16.97-13.14,22-87.93,32-85.91-3-161.56-31.75-110.99,24.6-149.8,2.74-106.33-46.92-94.46,26.95-63.2-43.95-83.9-17.4-69.72-20.6-61.77,12.33h-118.25l-93.87-23.33-110.96,39.38-80.85-1.31s-190.68,3.12-199.78,1.31l-57,18.03-14.76,4.67s-87.93,20.88-98.59,24.41c-4.11,1.36-17.88,12.43-33.25,25.5-2.4,2.04-4.83,4.14-7.28,6.25-1.45,1.24-2.89,2.51-4.34,3.76H3066.94v-13.23Z"/>

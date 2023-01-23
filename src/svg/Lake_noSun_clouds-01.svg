@@ -55,12 +55,12 @@
       }
     </style>
     <linearGradient id="linear-gradient" x1="827.73" y1="467.85" x2="1778.79" y2="467.85" gradientUnits="userSpaceOnUse">
-      <stop offset=".06" stop-color="#fff"/>
-      <stop offset=".1" stop-color="#fbfeff"/>
-      <stop offset=".12" stop-color="#f1feff"/>
-      <stop offset=".15" stop-color="#e0feff"/>
-      <stop offset=".18" stop-color="#c8feff"/>
-      <stop offset=".19" stop-color="#b5feff"/>
+      <stop offset=".06" stopColor="#fff"/>
+      <stop offset=".1" stopColor="#fbfeff"/>
+      <stop offset=".12" stopColor="#f1feff"/>
+      <stop offset=".15" stopColor="#e0feff"/>
+      <stop offset=".18" stopColor="#c8feff"/>
+      <stop offset=".19" stopColor="#b5feff"/>
     </linearGradient>
     <linearGradient id="linear-gradient-2" x1="900.95" y1="517.29" x2="1629.45" y2="517.29" xlink:href="#linear-gradient"/>
     <linearGradient id="linear-gradient-3" x1="2504.29" y1="517.09" x2="3160.61" y2="517.09" xlink:href="#linear-gradient"/>
