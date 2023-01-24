@@ -35,7 +35,8 @@ const MainLink = styled(Nav.Link)`
 `
 
 const HamburgerMenu = styled(Hamburger)`
-   
+   color: white;
+   background: white;
     
 `
 
@@ -54,7 +55,6 @@ const KNavBar = ({
     const [expanded, setExpanded] = useState(false);
     const [width, setWidth] = useState(0)
 
-    console.log('QQQQ width', width);
 
     useEffect(() => {
         function handleResize() {
@@ -74,7 +74,7 @@ const KNavBar = ({
         <MainNavBar collapseOnSelect expand='md' expanded={expanded}>
             {width < 768 ?
                 <div style={{ marginLeft: '1rem' }}>
-                    <HamburgerMenu toggled={expanded} onToggle={() => setExpanded(!expanded)} rounded={true} />
+                    <HamburgerMenu toggled={expanded} onToggle={() => setExpanded(!expanded)} rounded={true} color={'white'} />
                 </div>
                 :
                 <div />

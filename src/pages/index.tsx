@@ -15,7 +15,6 @@ import { Mountain3 } from "../svg/new_lake/mountain_3"
 import { Cloud2 } from "../svg/new_lake/cloud_2"
 import { Mountain2 } from "../svg/new_lake/mountain_2"
 import { Mountain1 } from "../svg/new_lake/mountain_1"
-import ComingSoon from "../components/second_page/coming_soon"
 import FirstPage from "../components/first_page/first_page"
 import MinimalistMtnOrange from "../svg/MinimalistMtnOrange"
 import MinimalistMtnYellow from "../svg/MinimalistMtnYellow";
@@ -23,6 +22,7 @@ import MinimalistMtnBlue from "../svg/MinimalistMtnBlue";
 import './index.css';
 import NavBar from "../components/nav_bar/NavBar"
 import KNavBar from "../components/nav_bar/NavBar"
+import Schedule from "../components/second_page/schedule"
 
 const MainDiv = styled.div`
     display: flex;
@@ -422,7 +422,7 @@ const IndexPage = () => {
                     }}
                 >
                     <div style={{ opacity: getOpacity(kStartOpacity, currentPercentScrolled) }}>
-                        <ComingSoon />
+                        <Schedule />
                     </div>
 
                 </ParallaxLayer>
