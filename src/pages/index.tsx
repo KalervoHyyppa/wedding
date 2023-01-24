@@ -20,14 +20,17 @@ import FirstPage from "../components/first_page/first_page"
 import MinimalistMtnOrange from "../svg/MinimalistMtnOrange"
 import MinimalistMtnYellow from "../svg/MinimalistMtnYellow";
 import MinimalistMtnBlue from "../svg/MinimalistMtnBlue";
+import './index.css';
+import NavBar from "../components/nav_bar/NavBar"
+import KNavBar from "../components/nav_bar/NavBar"
 
 const MainDiv = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     height: 100%;
     width: 100%;
-    align-items: center;
+    /* align-items: center; */
     /* background: #e6e6e6; */
     background: linear-gradient(#e66465, #9198e5);
 `
@@ -67,7 +70,7 @@ const IndexPage = () => {
     const k3rdSectionStart = kStart + 1.75
     const kSpeed = 0.9
     const kPages = 4
-    const kStartOpacity = .150
+    const kStartOpacity = .195
 
 
     const kZBack = -1
@@ -107,6 +110,7 @@ const IndexPage = () => {
     }
 
     const myRef = useRef<any>(null);
+    const parallaxRef = useRef<any>(null);
 
     const handleScroll2 = (e: any) => {
         const height = myRef.current.clientHeight
@@ -135,14 +139,38 @@ const IndexPage = () => {
         }
     }, [])
 
+    const scrollToSchedule = () => {
+        parallaxRef.current.scrollTo(1.4);
+    }
+
+    const scrollToLodging = () => {
+        parallaxRef.current.scrollTo(3.8);
+    }
+
+    const scrollToThings = () => {
+        parallaxRef.current.scrollTo(4.8);
+    }
+
+    const scrollToRegistry = () => {
+        parallaxRef.current.scrollTo(5.8);
+    }
+
+
     return (
         <MainDiv ref={myRef} className='my-class-name'>
+            <KNavBar
+                scheduleLink={() => scrollToSchedule()}
+                lodgingLink={() => scrollToLodging()}
+                thingsLink={() => scrollToThings()}
+                registryLink={() => scrollToRegistry()}
+            />
+
             <Parallax
                 pages={kPages}
+                ref={parallaxRef}
                 style={{
                     top: '0', left: '0',
                     background: "linear-gradient(#e66465, #9198e5)",
-
                 }}
                 config={{
                     mass: .5,
@@ -484,7 +512,9 @@ const IndexPage = () => {
 
 
 
+
             </Parallax>
+
         </MainDiv>
     )
 

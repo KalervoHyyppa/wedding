@@ -22,6 +22,7 @@
         "@loadable/component": "^5.15.2",
         "@react-spring/parallax": "^9.5.5",
         "babel-plugin-styled-components": "^2.0.7",
+        "bootstrap": "^5.2.3",
         "gatsby": "^4.24.4",
         "gatsby-background-image": "^1.6.0",
         "gatsby-omni-font-loader": "^2.0.2",
@@ -32,7 +33,9 @@
         "gatsby-source-filesystem": "^4.24.0",
         "gatsby-transformer-sharp": "^4.24.0",
         "gbimage-bridge": "^0.2.2",
+        "hamburger-react": "^2.5.0",
         "react": "^18.1.0",
+        "react-bootstrap": "^2.7.0",
         "react-dom": "^18.1.0",
         "react-helmet": "^6.1.0",
         "styled-components": "^5.3.6"
