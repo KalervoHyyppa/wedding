@@ -23,6 +23,7 @@ import './index.css';
 import NavBar from "../components/nav_bar/NavBar"
 import KNavBar from "../components/nav_bar/NavBar"
 import Schedule from "../components/second_page/schedule"
+import Lodging from "../components/third_section/lodging/lodging"
 
 const MainDiv = styled.div`
     display: flex;
@@ -465,6 +466,20 @@ const IndexPage = () => {
                     }}
                 >
                     <OrangeBlock />
+                </ParallaxLayer>
+
+                <ParallaxLayer
+                    sticky={{ start: k3rdSectionStart + 1.25, end: k3rdSectionStart + 10 }}
+
+                    style={{
+                        // height: '100%',
+                        display: 'flex',
+                        alignItems: 'start',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <Lodging
+                    />
                 </ParallaxLayer>
 
                 <ParallaxLayer

@@ -41,7 +41,7 @@ const TextDiv = styled.div`
 `
 
 const H2 = styled.h2`
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: bold;
     margin: 0;
     @media (max-width: 768px) {
