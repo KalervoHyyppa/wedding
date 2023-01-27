@@ -9,7 +9,7 @@ const RowDiv = styled.div`
     flex-direction: column;
     /* height: 25rem; */
     width: 100%;
-    margin-top: -20rem;
+    margin-top: -25rem;
 
     max-width: 35rem;
     justify-content: start;

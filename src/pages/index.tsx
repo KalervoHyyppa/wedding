@@ -146,15 +146,15 @@ const IndexPage = () => {
     }
 
     const scrollToLodging = () => {
-        parallaxRef.current.scrollTo(3.8);
+        parallaxRef.current.scrollTo(3.65);
     }
 
     const scrollToThings = () => {
-        parallaxRef.current.scrollTo(4.8);
+        parallaxRef.current.scrollTo(5.3);
     }
 
     const scrollToRegistry = () => {
-        parallaxRef.current.scrollTo(5.8);
+        parallaxRef.current.scrollTo(6.3);
     }
 
 
@@ -472,7 +472,7 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: k3rdSectionStart + 1.75, end: k3rdSectionStart + 10 }}
+                    sticky={{ start: k3rdSectionStart + 1.95, end: k3rdSectionStart + 10 }}
 
                     style={{
                         // height: '100%',
@@ -487,7 +487,7 @@ const IndexPage = () => {
 
                 <ParallaxLayer
 
-                    sticky={{ start: k3rdSectionStart + .25, end: k3rdSectionStart + 1.75 }}
+                    sticky={{ start: k3rdSectionStart + .25, end: k3rdSectionStart + 2.05 }}
                     style={{
                         // height: '100%',
                         display: 'flex',
@@ -502,13 +502,13 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: k3rdSectionStart + 2.7 }}
+                    sticky={{ start: k3rdSectionStart + 2.9 }}
                 >
                     <YellowBlock />
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: k3rdSectionStart + .15, end: k3rdSectionStart + 2.25 }}
+                    sticky={{ start: k3rdSectionStart + .15, end: k3rdSectionStart + 2.75 }}
 
                     style={{
                         // height: '100%',
@@ -524,7 +524,7 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: k3rdSectionStart + 3.2 }}
+                    sticky={{ start: k3rdSectionStart + 3.7 }}
 
                 >
                     <BlueBlock />
