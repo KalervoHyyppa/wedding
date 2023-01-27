@@ -24,6 +24,7 @@ import NavBar from "../components/nav_bar/NavBar"
 import KNavBar from "../components/nav_bar/NavBar"
 import Schedule from "../components/second_page/schedule"
 import Lodging from "../components/third_section/lodging/lodging"
+import LodgingHeader from "../components/third_section/lodging/lodging_header"
 
 const MainDiv = styled.div`
     display: flex;
@@ -451,6 +452,8 @@ const IndexPage = () => {
                         display: 'flex',
                         alignItems: 'end',
                         justifyContent: 'center',
+                        pointerEvents: 'none',
+
                     }}
                 >
                     <MinimalistMtnOrange
@@ -469,7 +472,7 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: k3rdSectionStart + 1.25, end: k3rdSectionStart + 10 }}
+                    sticky={{ start: k3rdSectionStart + 1.75, end: k3rdSectionStart + 10 }}
 
                     style={{
                         // height: '100%',
@@ -478,18 +481,19 @@ const IndexPage = () => {
                         justifyContent: 'center',
                     }}
                 >
-                    <Lodging
-                    />
+                    <Lodging />
                 </ParallaxLayer>
+
 
                 <ParallaxLayer
 
-                    sticky={{ start: k3rdSectionStart + .25, end: k3rdSectionStart + 1.25 }}
+                    sticky={{ start: k3rdSectionStart + .25, end: k3rdSectionStart + 1.75 }}
                     style={{
                         // height: '100%',
                         display: 'flex',
                         alignItems: 'end',
                         justifyContent: 'center',
+                        pointerEvents: 'none',
                     }}
                 >
                     <MinimalistMtnYellow
@@ -498,7 +502,7 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: k3rdSectionStart + 2.2 }}
+                    sticky={{ start: k3rdSectionStart + 2.7 }}
                 >
                     <YellowBlock />
                 </ParallaxLayer>
@@ -511,6 +515,7 @@ const IndexPage = () => {
                         display: 'flex',
                         alignItems: 'end',
                         justifyContent: 'center',
+                        pointerEvents: 'none',
                     }}
                 >
                     <MinimalistMtnBlue

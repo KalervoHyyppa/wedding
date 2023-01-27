@@ -1,0 +1,1 @@
+const kMinimalOrange = '#FFAB37';

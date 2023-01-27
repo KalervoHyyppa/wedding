@@ -18,6 +18,7 @@ const MinimalistMtnYellow = (props: any) => (
         // width="1920"
         // height="1080"
         viewBox={"0 0 1920 1080"}
+        transform="translate(0,60)"
         {...props}
     >
         <defs>

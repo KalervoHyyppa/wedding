@@ -10,39 +10,76 @@ const MainDiv = styled.div`
     justify-content: center;
     flex-direction: row;
 
-    height: 4rem;
-    width: 18rem;
+    height: 7.5rem;
+    width: 100%;
+    margin: .5rem;
 
+    @media (max-width: 768px) {
+        width: 20rem;
 
+    }
 
-    border-radius: 55px;
-    background: #FFAB37;
-    box-shadow:  9px 9px 18px #d6902e,
-                -9px -9px 18px #ffc640;
+    /* border-radius: 2rem; */
+    /* background: #ffc06a; */
+
 `
 
 const H3 = styled.h3`
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    text-decoration: underline;
 `
 const H4 = styled.h4`
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin: 0;
 `
 
 const ColumnDiv = styled.div`
     display: flex;
     flex-direction: column;
+    flex: 2;
 
+
+`
+
+const Img = styled.img`
+    width: 100%;
+
+    @media (max-width: 768px) {
+        width: 8rem;
+
+    }
+`
+
+const ImgDiv = styled.div`
+    flex: 1;
+    margin-right: .5rem;
+
+
+`
+
+const NameButton = styled.div`
+    cursor:pointer;
 `
 
 const LodgingButton = ({ lodgingOption }: { lodgingOption: LodgingModel }) => {
 
-
+    function openInNewTab() {
+        var win: any = window.open(lodgingOption.url, '_blank');
+        win.focus();
+    }
     return (
         <MainDiv>
+            <ImgDiv>
+                <Img src={lodgingOption.imageUrl} />
+
+            </ImgDiv>
 
             <ColumnDiv>
-                <H3>{lodgingOption.name}</H3>
-                <H4>{lodgingOption.address}</H4>
+                <NameButton onClick={() => openInNewTab()}>
+                    <H3>{lodgingOption.name}</H3>
+                </NameButton>
+                <H4>{lodgingOption.address1}</H4>
+                <H4>{lodgingOption.address2}</H4>
             </ColumnDiv>
 
         </MainDiv>
