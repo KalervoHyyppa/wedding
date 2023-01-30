@@ -25,6 +25,8 @@ import KNavBar from "../components/nav_bar/NavBar"
 import Schedule from "../components/second_page/schedule"
 import Lodging from "../components/third_section/lodging/lodging"
 import LodgingHeader from "../components/third_section/lodging/lodging_header"
+import ThingsToDo from "../components/third_section/things_to_do/things_to_do"
+import Registry from "../components/third_section/registry/registry"
 
 const MainDiv = styled.div`
     display: flex;
@@ -44,7 +46,7 @@ const OffWhiteBlock = styled.div`
 `
 
 const OrangeBlock = styled.div`
-    height: 200%;
+    height: 220%;
     width: 100%;
     background: #ffab38;
 `
@@ -56,7 +58,7 @@ const YellowBlock = styled.div`
 `
 
 const BlueBlock = styled.div`
-    height: 300%;
+    height: 100%;
     width: 100%;
     background: #b3dcd4;
 `
@@ -150,11 +152,11 @@ const IndexPage = () => {
     }
 
     const scrollToThings = () => {
-        parallaxRef.current.scrollTo(5.3);
+        parallaxRef.current.scrollTo(5.6);
     }
 
     const scrollToRegistry = () => {
-        parallaxRef.current.scrollTo(6.3);
+        parallaxRef.current.scrollTo(7.3);
     }
 
 
@@ -502,13 +504,26 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: k3rdSectionStart + 2.9 }}
+                    sticky={{ start: k3rdSectionStart + 3 }}
                 >
                     <YellowBlock />
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: k3rdSectionStart + .15, end: k3rdSectionStart + 2.75 }}
+                    sticky={{ start: k3rdSectionStart + 3.6, end: k3rdSectionStart + 10 }}
+
+                    style={{
+                        // height: '100%',
+                        display: 'flex',
+                        alignItems: 'start',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <ThingsToDo />
+                </ParallaxLayer>
+
+                <ParallaxLayer
+                    sticky={{ start: k3rdSectionStart + .15, end: k3rdSectionStart + 3.75 }}
 
                     style={{
                         // height: '100%',
@@ -524,13 +539,25 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: k3rdSectionStart + 3.7 }}
+                    sticky={{ start: k3rdSectionStart + 4.7 }}
 
                 >
                     <BlueBlock />
                 </ParallaxLayer>
 
 
+                <ParallaxLayer
+                    sticky={{ start: k3rdSectionStart + 4.7, end: k3rdSectionStart + 10 }}
+
+                    style={{
+                        // height: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <Registry />
+                </ParallaxLayer>
 
 
             </Parallax>
