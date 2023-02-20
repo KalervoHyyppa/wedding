@@ -72,7 +72,7 @@ const IndexPage = () => {
     const k3rdSectionStart = kStart + 1.75
     const kSpeed = 0.9
     const kPages = 3.5
-    const kStartOpacity = .2
+    const kStartOpacity = .195
 
 
     const kZBack = -1
@@ -223,49 +223,150 @@ const IndexPage = () => {
                         style={{ minWidth: minWidth }}
 
                     />
+                </ParallaxLayer>
 
+                <ParallaxLayer
+                    sticky={{ start: kStart + .4, end: kEnd }}
+                    id="Mountain5"
+
+                    style={{
+                        // height: '100%',
+                        // zIndex: kZMiddle,
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
                     <Mountain5
                         width={width}
                         style={{ minWidth: minWidth }}
 
                     />
+                </ParallaxLayer>
 
+
+
+                <ParallaxLayer
+
+                    id="Mountain4"
+                    sticky={{ start: kStart + .35, end: kEnd }}
+
+                    style={{
+                        // zIndex: kZMiddle,
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
                     <Mountain4
                         width={width}
                         style={{ minWidth: minWidth }}
 
                     />
+                </ParallaxLayer>
 
+                <ParallaxLayer
+                    sticky={{ start: kStart + .3, end: kEnd }}
+                    id="Mountain3"
+
+
+                    style={{
+                        // zIndex: kZMiddle,
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
                     <Mountain3
                         width={width}
                         style={{ minWidth: minWidth }}
 
                     />
+                </ParallaxLayer>
 
+
+                <ParallaxLayer
+                    sticky={{ start: kStart + .25, end: kEnd }}
+                    id="Mountain2"
+
+                    style={{
+                        // zIndex: kZMiddle,
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
                     <Mountain2
                         width={width}
                         style={{ minWidth: minWidth }}
 
                     />
+                </ParallaxLayer>
 
+                <ParallaxLayer
+                    sticky={{ start: kStart + .2, end: kEnd }}
+                    id="Mountain1"
+
+                    style={{
+                        // zIndex: kZMiddle,
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
                     <Mountain1
                         width={width}
                         style={{ minWidth: minWidth }}
 
                     />
+                </ParallaxLayer>
 
+                <ParallaxLayer
+                    sticky={{ start: kStart + .15, end: kEnd }}
+                    id="MiddleIslands"
+
+                    style={{
+                        // zIndex: kZMiddle,
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
                     <MiddleIslands
                         width={width}
                         style={{ minWidth: minWidth }}
 
                     />
+                </ParallaxLayer>
 
+                <ParallaxLayer
+                    sticky={{ start: kStart + .1, end: kEnd }}
+                    id="TreesAndStones"
+
+                    style={{
+                        // zIndex: kZMiddle,
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
                     <TreesAndStones
                         width={width}
                         style={{ minWidth: minWidth }}
 
                     />
+                </ParallaxLayer>
+                <ParallaxLayer
+                    sticky={{ start: kStart + .05, end: kEnd }}
+                    id="FrontBushes"
 
+                    style={{
+                        // zIndex: kZMiddle,
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
                     <FrontBushes
                         width={width}
                         style={{ minWidth: minWidth }}

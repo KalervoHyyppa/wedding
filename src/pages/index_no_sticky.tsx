@@ -71,8 +71,8 @@ const IndexPage = () => {
     const kEnd = 3.5
     const k3rdSectionStart = kStart + 1.75
     const kSpeed = 0.9
-    const kPages = 3.5
-    const kStartOpacity = .2
+    const kPages = 4
+    const kStartOpacity = .195
 
 
     const kZBack = -1
@@ -209,7 +209,7 @@ const IndexPage = () => {
 
                     id="Mountain6"
 
-                    sticky={{ start: kStart + .45, end: kEnd }}
+                    offset={kStart + .45}
 
                     style={{
                         // zIndex: kZMiddle,
@@ -223,49 +223,150 @@ const IndexPage = () => {
                         style={{ minWidth: minWidth }}
 
                     />
+                </ParallaxLayer>
 
+                <ParallaxLayer
+                    offset={kStart + .4}
+                    id="Mountain5"
+
+                    style={{
+                        // height: '100%',
+                        // zIndex: kZMiddle,
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
                     <Mountain5
                         width={width}
                         style={{ minWidth: minWidth }}
 
                     />
+                </ParallaxLayer>
 
+
+
+                <ParallaxLayer
+
+                    id="Mountain4"
+                    offset={kStart + .35}
+
+                    style={{
+                        // zIndex: kZMiddle,
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
                     <Mountain4
                         width={width}
                         style={{ minWidth: minWidth }}
 
                     />
+                </ParallaxLayer>
 
+                <ParallaxLayer
+                    offset={kStart + .3}
+                    id="Mountain3"
+
+
+                    style={{
+                        // zIndex: kZMiddle,
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
                     <Mountain3
                         width={width}
                         style={{ minWidth: minWidth }}
 
                     />
+                </ParallaxLayer>
 
+
+                <ParallaxLayer
+                    offset={kStart + .25}
+                    id="Mountain2"
+
+                    style={{
+                        // zIndex: kZMiddle,
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
                     <Mountain2
                         width={width}
                         style={{ minWidth: minWidth }}
 
                     />
+                </ParallaxLayer>
 
+                <ParallaxLayer
+                    offset={kStart + .2}
+                    id="Mountain1"
+
+                    style={{
+                        // zIndex: kZMiddle,
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
                     <Mountain1
                         width={width}
                         style={{ minWidth: minWidth }}
 
                     />
+                </ParallaxLayer>
 
+                <ParallaxLayer
+                    offset={kStart + .15}
+                    id="MiddleIslands"
+
+                    style={{
+                        // zIndex: kZMiddle,
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
                     <MiddleIslands
                         width={width}
                         style={{ minWidth: minWidth }}
 
                     />
+                </ParallaxLayer>
 
+                <ParallaxLayer
+                    offset={kStart + .1}
+                    id="TreesAndStones"
+
+                    style={{
+                        // zIndex: kZMiddle,
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
                     <TreesAndStones
                         width={width}
                         style={{ minWidth: minWidth }}
 
                     />
+                </ParallaxLayer>
+                <ParallaxLayer
+                    offset={kStart + .05}
+                    id="FrontBushes"
 
+                    style={{
+                        // zIndex: kZMiddle,
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'center',
+                    }}
+                >
                     <FrontBushes
                         width={width}
                         style={{ minWidth: minWidth }}
@@ -274,7 +375,7 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: kStart + .5, end: kEnd + .1 }}
+                    offset={kStart + .5}
                     id="Schedule"
                     style={{
                         // zIndex: kZMiddle,
@@ -297,7 +398,7 @@ const IndexPage = () => {
                 ********************************/}
                 {/* 
                 <ParallaxLayer
-                    sticky={{ start: k3rdSectionStart }}
+                    offset={k3rdSectionStart }
                 >
                     <OffWhiteBlock />
                 </ParallaxLayer> */}
@@ -305,7 +406,7 @@ const IndexPage = () => {
 
 
                 <ParallaxLayer
-                    sticky={{ start: k3rdSectionStart + .35, end: k3rdSectionStart + .35 }}
+                    offset={k3rdSectionStart + .35}
 
                     style={{
                         // height: '100%',
@@ -322,7 +423,7 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: k3rdSectionStart + 1.2 }}
+                    offset={k3rdSectionStart + 1.2}
 
                     style={{
 
@@ -332,7 +433,7 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: k3rdSectionStart + 1.95, end: k3rdSectionStart + 10 }}
+                    offset={k3rdSectionStart + 1.95}
 
                     style={{
                         // height: '100%',
@@ -347,7 +448,7 @@ const IndexPage = () => {
 
                 <ParallaxLayer
 
-                    sticky={{ start: k3rdSectionStart + .25, end: k3rdSectionStart + 2.05 }}
+                    offset={k3rdSectionStart + .25}
                     style={{
                         // height: '100%',
                         display: 'flex',
@@ -362,13 +463,13 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: k3rdSectionStart + 3 }}
+                    offset={k3rdSectionStart + 3}
                 >
                     <YellowBlock />
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: k3rdSectionStart + 3.6, end: k3rdSectionStart + 10 }}
+                    offset={k3rdSectionStart + 3.6}
 
                     style={{
                         // height: '100%',
@@ -381,7 +482,7 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: k3rdSectionStart + .15, end: k3rdSectionStart + 3.75 }}
+                    offset={k3rdSectionStart + .15}
 
                     style={{
                         // height: '100%',
@@ -397,7 +498,7 @@ const IndexPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    sticky={{ start: k3rdSectionStart + 4.7 }}
+                    offset={k3rdSectionStart + 4.7}
 
                 >
                     <BlueBlock />
@@ -405,7 +506,7 @@ const IndexPage = () => {
 
 
                 <ParallaxLayer
-                    sticky={{ start: k3rdSectionStart + 4.7, end: k3rdSectionStart + 10 }}
+                    offset={k3rdSectionStart + 4.7}
 
                     style={{
                         // height: '100%',
@@ -420,7 +521,7 @@ const IndexPage = () => {
 
             </Parallax>
 
-        </MainDiv>
+        </MainDiv >
     )
 
 }
