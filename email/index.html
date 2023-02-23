@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Grand Hotel' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+    <style>
+        body {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            font-family: 'Amatic SC';
+            font-size: 22px;
+            background-color: white;
+        }
+
+
+        .card {
+            display: flex;
+            position: relative;
+            flex: 1;
+            flex-direction: column;
+            margin: 1rem;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 1rem;
+            width: 100%;
+            max-width: 25rem;
+            height: 100%;
+            max-height: 35rem;
+            min-height: 25rem;
+
+            box-shadow: 0 5px 21px rgba(0, 0, 0, 0.2);
+            -webkit-box-shadow: 0 5px 21px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0 5px 21px rgba(0, 0, 0, 0.2);
+
+
+
+        }
+
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            border-radius: 1rem;
+
+            background: url(https://lh3.googleusercontent.com/dAtKKxfPP_pQlaJKd_qSOQaFflhbPpLDb5MyrzQ2mKcyi8qnuswYEv33Zo6FW1JUclwbIHKRv1YAJZuNns0VoPbZFVD-lEd4V0xocwZSk5kdoiwPkXWLllac8j-EBGfC3OQtqu9uYK8=w2400) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            opacity: 50%;
+        }
+
+
+        .header {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .whenWhere {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            flex: 1;
+        }
+
+        .whenWhereInternal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: .5rem;
+        }
+
+        .pictures {
+            display: flex;
+            flex: 1;
+
+        }
+
+        .website {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+
+        }
+
+        .ko {
+            height: 6rem;
+        }
+
+        .saveTheDate {
+            font-family: 'Amatic SC';
+            /* font-family: 'Grand Hotel'; */
+            font-size: 3.5rem;
+            margin: 0;
+        }
+
+        h2 {
+            margin: 0;
+        }
+
+        .button {
+            border: none;
+            backdrop-filter: blur(20px);
+            border-radius: .5rem;
+            padding: .5rem 1rem;
+            font-family: 'Amatic SC';
+            font-size: 1rem;
+            text-decoration: none;
+            color: black;
+
+            box-shadow: 0 5px 21px rgba(0, 0, 0, 0.2);
+            -webkit-box-shadow: 0 5px 21px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0 5px 21px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="background"></div>
+
+        <!-- Header -->
+        <div class="header">
+            <h1 class="saveTheDate">Save the Date</h1>
+            <img src="https://lh3.googleusercontent.com/5muL9vTiFA-ayj3Cs4HgH1dCX_iDKWU_HC-3JWZu0P2F81z5UoY4HdfCiloJ5A9JgE5Df4s1YpxcJVOX4bvqHRcL4mEZihNNdtuttAP8m6KMXETaavr4CfQVV9lMHGiWpHZRcfkIJ1c=w2400"
+                class="ko" alt="" />
+
+        </div>
+        <!-- When and Where -->
+        <div class="whenWhere">
+            <h2>September 22, 2023</h2>
+            <h2>Saranac Lake, NY</h2>
+
+
+
+        </div>
+        <!-- Pictures -->
+        <div class="pictures">
+
+        </div>
+        <!-- Website -->
+        <div class="website">
+            <p>More information:</p>
+            <a class="button" href="https://www.weddingko.com" target="_blank">WeddingKO.com</a>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
