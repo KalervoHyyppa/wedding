@@ -104,14 +104,14 @@ const ComingSoon = () => {
                     <ListItem
                         itemName={'Ceremony'}
                         time={'3 PM'}
-                        location={'Camp Iroquois'}
-                        url={"https://goo.gl/maps/dew4HhwpzJKLXTfw7"}
+                        location={'Camp Canaras'}
+                        url={"https://goo.gl/maps/LC4ShiYZdoKx1sHv8"}
                     />
                     <ListItem
                         itemName={'Reception'}
                         time={'5 PM'}
-                        location={'Mt. Pisgah'}
-                        url={"https://goo.gl/maps/a9Sw46u89k8kDVycA"}
+                        location={'Camp Canaras`'}
+                        url={"https://goo.gl/maps/LC4ShiYZdoKx1sHv8"}
                     />
 
                 </TextDiv>
