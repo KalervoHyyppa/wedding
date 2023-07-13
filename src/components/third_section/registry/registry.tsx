@@ -2,8 +2,9 @@
 
 import * as React from "react"
 import styled from 'styled-components'
+import { StaticImage } from 'gatsby-plugin-image'
 
-const RowDiv = styled.div`
+const ColDiv = styled.div`
     display: flex;
     flex-direction: column;
     /* height: 25rem; */
@@ -18,17 +19,32 @@ const RowDiv = styled.div`
 
 
 const H2 = styled.h2`
+    margin-top: 3rem;
     font-weight: bold;
     font-size: 2.5rem;
+    cursor:pointer;
+    text-decoration: underline;
+    text-align: center;
 `
 
 const Registry = () => {
 
+    function openInNewTab() {
+        console.log('QQQQ open');
+        var win: any = window.open("https://withjoy.com/kalervo-and-olivia/registry", '_blank');
+        win.focus();
+    }
+
     return (
-        <RowDiv>
-            <H2>Registry</H2>
-            <H2>Coming Soon</H2>
-        </RowDiv>
+        <ColDiv>
+            <StaticImage
+                src="../../../images/present.png"
+                alt="present"
+                width={100}
+                placeholder="blurred"
+            />
+            <H2 onClick={() => openInNewTab()}>Click Here for the Registry</H2>
+        </ColDiv>
     )
 
 }

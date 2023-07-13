@@ -94,8 +94,8 @@ const ComingSoon = () => {
                     <ListItem
                         itemName={'Happy Hour'}
                         time={'4 PM'}
-                        location={'TBD'}
-                        url=""
+                        location={'Raquette River Brewing'}
+                        url={"https://goo.gl/maps/csYrU5KGurHUCqbL6"}
                     />
                 </TextDiv>
 
@@ -110,7 +110,7 @@ const ComingSoon = () => {
                     <ListItem
                         itemName={'Reception'}
                         time={'5 PM'}
-                        location={'Camp Canaras`'}
+                        location={'Camp Canaras'}
                         url={"https://goo.gl/maps/LC4ShiYZdoKx1sHv8"}
                     />
 
@@ -149,7 +149,7 @@ const ColumnDiv = styled.div`
 `
 
 const TimeH3 = styled.h3`
-    margin-right: 2rem;
+    margin-right: 1.5rem;
     font-size: 1rem;
     font-weight: bold;
 `
