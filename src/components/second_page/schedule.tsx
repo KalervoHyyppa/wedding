@@ -17,7 +17,7 @@ const ComingSoonDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: start;
-    height: 30rem;
+    /* height: 30rem; */
     max-width: 25em;
     margin: .5rem;
 
@@ -38,6 +38,7 @@ const TextDiv = styled.div`
     align-items: start;
     justify-content: center;
     width: 100%;
+    margin-top: 1rem;
 `
 
 const H2 = styled.h2`
@@ -101,6 +102,8 @@ const ComingSoon = () => {
 
                 <TextDiv>
                     <H2>Friday - September 22, 2023:</H2>
+                    <H2 style={{ marginTop: '.5rem', marginBottom: '.5rem', fontSize: '1rem', fontStyle: 'italic', fontWeight: 'normal' }}>Dressy Casual</H2>
+
                     <ListItem
                         itemName={'Ceremony'}
                         time={'3 PM'}
@@ -184,7 +187,6 @@ const ListItem = ({
 }) => {
 
     function openInNewTab() {
-        console.log('QQQQ open');
         var win: any = window.open(url, '_blank');
         win.focus();
     }
