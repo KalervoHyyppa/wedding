@@ -26,5 +26,10 @@ exports.createPages = async ({ graphql, actions }) => {
         toPath: `https://d9cz8f9nzru.typeform.com/to/oedVdRTw`,
     })
 
+    createRedirect({
+        fromPath: `/share`,
+        toPath: `https://photos.app.goo.gl/V1smjiQwrRP8V6jb6`,
+    })
+
 
 }
